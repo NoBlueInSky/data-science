@@ -18,7 +18,8 @@ ages_five_number_summary = [ages_min, ages_first_quartile, ages_median, ages_thi
 
 plt.title('Ages')
 plt.boxplot(ages)
-for name, val in zip(["ages_min", "ages_first_quartile", "ages_median", "ages_third_quartile", "ages_max"],
+for name, val in zip(["min", "q1", "med", "q3", "max"],
                      ages_five_number_summary):
-    plt.text(1, val, f"{name}:{val:.2f}", ha='center', va='bottom', fontsize=8)
+    plt.text(1, val, f"{name}= {val:.2f}",
+             ha='center', va='bottom', fontsize=8, color='blue', fontweight='bold')
 plt.show()
