@@ -27,8 +27,8 @@ for name, val in zip(["min", "q1", "med", "q3", "max"],
     plt.text(1, val, f"{name}= {val:.2f}",
              ha='center', va='bottom', fontsize=8, color='blue', fontweight='bold')
 
-birth = pd.read_csv('birth-th.csv')
-death = pd.read_csv('death-th.csv')
+birth = pd.read_csv('../birth-th.csv')
+death = pd.read_csv('../death-th.csv')
 
 xyears = list(birth.iloc[1][3:])
 ybirth_all = list(birth.iloc[2][3:].str.replace(',', '').astype(int))
